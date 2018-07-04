@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sticky footer</title>
+    <style>
+        html, body {
+            height: 100%;
+        }
+        .c-wrapper {
+            min-height: 100%;
+            /*recommeded to always be same as footer height */
+            margin-bottom: -100px;
+        }
+        .c-wrapper:after {
+            content: "";
+            display: block;
+        }
+        .footer, .c-wrapper:after {
+            height: 100px;
+        }
+        .footer {
+            background-color: #00bcd4;
+            color: #FFFFFF;
+            padding: 16px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+<div class="c-wrapper">
+    <!--- Actual page content will live here-->
+    <h1>Hello World!</h1>
+    <p>This is a page with little content</p>
+</div>
+<div class="footer">
+    <p>&copy; 2018 Pius Aboyi EA</p>
+</div>
+</body>
+</html>
